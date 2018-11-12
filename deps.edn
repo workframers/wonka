@@ -1,0 +1,15 @@
+{:paths ["src"]
+
+ :deps {org.clojure/clojure       {:mvn/version "1.9.0"}
+        org.clojure/clojurescript {:mvn/version "1.10.439"}
+        binaryage/oops            {:mvn/version "0.6.2"}
+        thheller/shadow-cljs      {:mvn/version "2.7.2"}}
+
+ :aliases
+ {:debux
+  {:extra-deps
+   {philoskim/debux {:mvn/version "0.4.8"}}}
+
+  :test
+  {:extra-paths
+   ["test" "etc"]}}}
