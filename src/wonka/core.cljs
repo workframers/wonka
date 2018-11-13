@@ -3,7 +3,8 @@
             [cljs.spec.alpha :as s]
             [goog :refer [typeOf]]
             [goog.memoize]
-            [oops.core :refer [ocall]]))
+            [oops.core :refer [ocall]]
+            [wonka.reset :refer [meyer-reset]]))
 
 (def CONFIG (atom nil))
 
@@ -27,10 +28,13 @@
 (def ^:private camelize-style-name (goog.memoize camelize-style-name*))
 
 (defn get-theme-var [v]
-  (get (:theme @CONFIG) v))
+  (get (:theme @CONFIG) v {}))
+
+(defn get-theme-prefix []
+  (get @CONFIG :theme-prefix ""))
 
 (defn theme-rgx []
-  (re-pattern (str "^" (:theme-prefix @CONFIG) "\\.?")))
+  (re-pattern (str "^" (get-theme-prefix) "\\.?")))
 
 (defn theme-kw? [k]
   (and (keyword? k)
@@ -165,6 +169,12 @@
        (interpose " ")
        (apply str)))
 
-(defn init [{:keys [theme-prefix theme] :as config}]
+(defn config [{:keys [theme-prefix theme] :as config}]
   (reset! CONFIG config)
   config)
+
+(defn insert! [css-str]
+  (ocall glamor/css :insert css-str))
+
+(defn insert-reset! []
+  (insert! meyer-reset))

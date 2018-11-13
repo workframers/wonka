@@ -6,6 +6,11 @@
   },
   "devDependencies": {
     "glamor": "^2.20.40",
-    "shadow-cljs": "^2.7.2"
+    "shadow-cljs": "^2.7.2",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "create-react-class": "^15.6.3"
   }
 }

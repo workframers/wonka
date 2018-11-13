@@ -8,4 +8,5 @@
   [[org.clojure/clojure       "1.9.0"]
    [org.clojure/clojurescript "1.10.439"]
    [thheller/shadow-cljs      "2.7.2"]
-   [binaryage/oops            "0.6.2"]])
+   [binaryage/oops            "0.6.2"]
+   [reagent                   "0.8.1"]])
