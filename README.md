@@ -40,7 +40,7 @@ Just install Wonka and go, even gives you a browser reset :)
 
 ### API Overview
 
-`wonka.core/css`
+#### `wonka.core/css`
 
 Takes a variable number of arguments, which could be:
 
@@ -52,7 +52,7 @@ Takes a variable number of arguments, which could be:
 and returns a glamor object or a coll that includes a glamor object and any
 CSS class names as strings."
 
-`wonka.core/keyframes`
+#### `wonka.core/keyframes`
 
 Creates and returns a glamor keyframe definition. Use it inside css:
 
@@ -63,7 +63,7 @@ Creates and returns a glamor keyframe definition. Use it inside css:
 [:div {:class (w/css {:animation kf})}]
 ```
 
-`wonka.core/join`
+#### `wonka.core/join`
 
 CSS allows you to specify many shorthand properties as a single string
 (ex: `background-image: url(images/bg.gif); background-repeat: no-repeat;`
@@ -78,7 +78,7 @@ Ex:
 [:div {:class (w/css {:background (p/join \"url(images/bg.gif)\" \"no-repeat\")})}]
 ```
 
-`wonka.core/config`
+#### `wonka.core/config`
 
 Takes a map with two keywords:
 
@@ -97,7 +97,7 @@ Ex:
 
 You would pass the string `"app"` as the `:theme-prefix` value.
 
-`wonka.core/insert-reset!`
+#### `wonka.core/insert-reset!`
 
 Can be called to add a CSS reset to your app. It's the Eric Meyer reset. If you want something larger, like normalize.css, you can pass any raw CSS string to `wonka.core/insert!`.
 
