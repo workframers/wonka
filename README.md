@@ -1,5 +1,9 @@
 ![](https://raw.githubusercontent.com/workframers/wonka/master/resources/wonka.jpg)
 
+[![Clojars Project](https://img.shields.io/clojars/v/com.workframe/wonka.svg)](https://clojars.org/com.workframe/wonka)
+
+`[com.workframe/wonka "0.1.0-SNAPSHOT"]`
+
 "Ugh, I have to add CSS to my project, what do I need again?"
 
 Just install Wonka and go, even gives you a browser reset :)
