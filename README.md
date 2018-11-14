@@ -57,8 +57,8 @@ CSS class names as strings."
 Creates and returns a glamor keyframe definition. Use it inside css:
 
 ```clojure
-(def kf (keyframes {:from {:opacity 0}
-                    :to   {:opacity 1}}))
+(def kf (w/keyframes {:from {:opacity 0}
+                      :to   {:opacity 1}}))
 
 [:div {:class (w/css {:animation kf})}]
 ```
@@ -75,7 +75,7 @@ paper namespaced keyword lookups in the styleguide.
 Ex:
 
 ```clojure
-[:div {:class (w/css {:background (p/join \"url(images/bg.gif)\" \"no-repeat\")})}]
+[:div {:class (w/css {:background (w/join \"url(images/bg.gif)\" \"no-repeat\")})}]
 ```
 
 #### `wonka.core/config`
