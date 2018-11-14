@@ -101,6 +101,32 @@ You would pass the string `"app"` as the `:theme-prefix` value.
 
 Can be called to add a CSS reset to your app. It's the Eric Meyer reset. If you want something larger, like normalize.css, you can pass any raw CSS string to `wonka.core/insert!`.
 
+#### `wonka.core/insert-global!`
+
+Adds some css to the element globally
+
+Takes a CSS selector string, and a map of CSS
+
+Ex:
+
+```clojure
+(wonka.core/insert-global! "#app" {:margin 20})
+```
+
+#### `wonka.core/insert!`
+
+Adds some arbitrary CSS to the page
+
+Takes a raw CSS string
+
+Ex:
+
+```clojure
+(wonka.core/insert! "body {font-family: Helvetica}")
+```
+
+
+
 ## License
 
 Copyright © 2018 Workframe, Inc.
