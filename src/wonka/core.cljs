@@ -176,11 +176,5 @@
 (defn insert! [css-str]
   (ocall glamor/css :insert css-str))
 
-(defn insert-global! [selector rule]
-  (ocall glamor/css
-         :global
-         (name selector)
-         (-> rule resolve-rule-values clj->js)))
-
 (defn insert-reset! []
   (insert! meyer-reset))
